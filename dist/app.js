@@ -45,7 +45,7 @@ function render() {
   document.querySelectorAll('[data-view]').forEach(b=>{const active=b.dataset.view===state.view;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});
   document.querySelectorAll('[data-company]').forEach(b=>{const active=b.dataset.company===state.company;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});
   $('#topics').innerHTML=['All topics',...topics].map(t=>`<button class="topic ${state.topic===t?'active':''}" data-topic="${escapeHTML(t)}" aria-pressed="${state.topic===t}">${escapeHTML(t)}<span class="topic-count">${t==='All topics'?resources.length:resources.filter(r=>r.topics.includes(t)).length}</span></button>`).join('');
-  $('#library-title').innerHTML=`${state.view==='saved'?'Your shortlist':state.view==='reviewed'?'Reviewed resources':'The collection'} <span id="result-count">${list.length}</span>`;
+  $('#library-title').innerHTML=`${state.view==='saved'?'Your shortlist':state.view==='reviewed'?'Reviewed references':'All references'} <span id="result-count">${list.length}</span>`;
   const active=[state.company!=='All'?state.company:'',state.topic!=='All topics'?state.topic:'',state.format!=='All'?state.format:'',state.search.trim()?`“${state.search.trim()}”`:''].filter(Boolean);
   $('#filter-state').hidden=!active.length;$('#filter-summary').textContent=active.join(' · ');
   $('#cards').innerHTML=list.map(r=>{
@@ -77,8 +77,8 @@ document.addEventListener('click',event=>{
   if(b.dataset.open)openBrief(b.dataset.open);
   else if(b.dataset.save){const id=b.dataset.save;toggle(id,'saved');document.querySelector(`[data-save="${id}"]`)?.focus();}
   else if(b.dataset.review){const id=b.dataset.review,wasDialog=$('#detail').contains(b);toggle(id,'reviewed');if(!wasDialog)document.querySelector(`[data-review="${id}"]`)?.focus();}
-  else if(b.dataset.view){state.view=b.dataset.view;render();}
-  else if(b.dataset.company){state.company=b.dataset.company;render();}
+  else if(b.dataset.view){state.view=b.dataset.view;render();$('#library').scrollIntoView({block:'start'});}
+  else if(b.dataset.company){state.company=b.dataset.company;render();$('#library').scrollIntoView({block:'start'});}
   else if(b.dataset.topic){state.topic=b.dataset.topic;render();Array.from(document.querySelectorAll('[data-topic]')).find(x=>x.dataset.topic===state.topic)?.focus();}
 });
 $('#search').addEventListener('input',e=>{state.search=e.target.value;render();});

@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fieldnotes on data platforms, AI agents, analytics, and developer experience. Explore curated articles, compare ideas, and keep your own notes.">
-  <meta name="theme-color" content="#172b2b"><title>Data &amp; AI Fieldnotes · Ideas worth keeping</title>
+  <meta name="description" content="Rajat Verma’s perspective on the data, semantics, and context that make AI agents useful, with a curated library of engineering perspectives.">
+  <meta name="theme-color" content="#172b2b"><title>Data &amp; AI Fieldnotes · The foundations of useful AI</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172b2b'/%3E%3Cpath d='M18 16h28v32H18z' fill='%23e9c077'/%3E%3Cpath d='M24 16v32' stroke='%23172b2b' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#library">Skip to library</a>
   <aside class="sidebar">
-    <a class="brand" href="./" aria-label="Data &amp; AI Fieldnotes home"><span class="brand-icon">▤</span><span>DATA &amp; AI<br>FIELDNOTES<span class="brand-sub">Ideas worth keeping.</span></span></a>
-    <div class="side-label">YOUR LIBRARY</div>
+    <a class="brand" href="./" aria-label="Data &amp; AI Fieldnotes home"><span class="brand-icon">▤</span><span>DATA &amp; AI<br>FIELDNOTES<span class="brand-sub">The foundations of useful AI.</span></span></a>
+    <a class="perspective-link" href="#perspective">The perspective <span>↗</span></a>
+    <div class="side-label">REFERENCE LIBRARY</div>
     <nav aria-label="Library views" id="views">
-      <button class="nav-item active" data-view="all"><span>▦ &nbsp; All resources</span><span class="count" id="all-count">11</span></button>
+      <button class="nav-item active" data-view="all"><span>▦ &nbsp; All references</span><span class="count" id="all-count">11</span></button>
       <button class="nav-item" data-view="saved"><span>☆ &nbsp; Shortlist</span><span class="count" id="saved-count">0</span></button>
       <button class="nav-item" data-view="reviewed"><span>✓ &nbsp; Reviewed</span><span class="count" id="reviewed-count">0</span></button>
     </nav>
@@ -26,23 +27,90 @@
       <button class="company-btn" data-company="Spotify"><span class="company-dot spotify-dot"></span>Spotify<span>1</span></button>
       <button class="company-btn" data-company="Cross-company"><span class="company-dot cross-dot"></span>Cross-company<span>1</span></button>
     </nav>
-    <div class="side-bottom"><div class="small-label">MAKE IT YOURS</div><p>Keep the ideas.<br>Bring your perspective.</p><div class="backup-actions"><button id="export">Export notes ↗</button><button id="import">Import</button><input id="import-file" type="file" accept="application/json,.json" hidden></div><span class="local-note">Notes and progress stay in this browser. Export to keep a backup.</span></div>
-    <div class="profile"><span class="avatar">RV</span><div>Curated by Rajat Verma<small>Data, AI &amp; developer experience</small></div></div>
+    <div class="side-bottom"><div class="small-label">YOUR READING NOTES</div><p>Save references.<br>Record your thinking.</p><div class="backup-actions"><button id="export">Export notes ↗</button><button id="import">Import</button><input id="import-file" type="file" accept="application/json,.json" hidden></div><span class="local-note">Notes and progress stay in this browser. Export to keep a backup.</span></div>
+    <div class="profile"><span class="avatar">RV</span><div>By Rajat Verma<small>Data, AI &amp; developer experience</small></div></div>
   </aside>
   <main>
-    <header class="topbar"><span>FIELDNOTES <span class="slash">/</span> Data &amp; AI</span><span class="private"><span></span> Curated reading library</span></header>
+    <header class="topbar"><span>FIELDNOTES <span class="slash">/</span> Data &amp; AI</span><span class="private"><span></span> A practitioner’s perspective</span></header>
     <div class="main-content">
-      <section class="intro"><div><div class="eyebrow">READ. CONNECT. BUILD YOUR PERSPECTIVE.</div><h1>Ideas worth keeping.<br>Patterns worth connecting.</h1><p>A curated collection for people building with data and AI.<br class="desktop-break"> Data platforms, analytics, and the people building them.</p></div><div class="stats"><div><strong id="total-resources">11</strong><span>resources</span></div><div><strong id="total-topics">09</strong><span>topics</span></div></div></section>
-      <section class="reading-path" aria-labelledby="path-title"><div class="path-icon">↗</div><div><div class="small-label">CONNECT THE DOTS</div><h2 id="path-title">From shared metrics to trusted answers</h2><p>Start with semantic layers. Explore Netflix’s approach. Then compare it with Kepler.</p><div class="path-links"><button data-open="bi-semantic">01 &nbsp; The argument <span>↗</span></button><span class="path-arrow">→</span><button data-open="netflix-analytics">02 &nbsp; The practice <span>↗</span></button><span class="path-arrow">→</span><button data-open="kepler">03 &nbsp; The next interface <span>↗</span></button></div></div><span class="path-caption">A suggested reading path</span></section>
+      <article class="perspective" id="perspective" aria-labelledby="perspective-title">
+        <header class="essay-header">
+          <div class="eyebrow">A PERSPECTIVE BY RAJAT VERMA</div>
+          <h1 id="perspective-title">Building the foundations<br>for useful AI.</h1>
+          <p class="essay-deck">Reliable data. Shared meaning. Relevant context.<br>How they come together to help agents do useful work.</p>
+          <div class="essay-meta"><span>Data &amp; AI Fieldnotes</span><span aria-hidden="true">/</span><span>November 1, 2026</span><a href="#library">Explore the references ↓</a></div>
+        </header>
+        <div class="essay-opening">
+          <p>My view is that enterprise AI is as much a data-product challenge as a model challenge. An agent needs evidence it can trust, a consistent understanding of the business, and enough context to judge what matters for the task in front of it.</p>
+          <p>I think about that foundation as three connected responsibilities: making data dependable, making meaning reusable, and making context relevant. The value appears when an agent can use all three to produce a result someone can inspect and act on.</p>
+        </div>
+        <figure class="intelligence-map" aria-labelledby="map-caption">
+          <ol class="layer-map">
+            <li><span class="layer-number">01</span><strong>Data</strong><span>Dependable evidence</span></li>
+            <li><span class="layer-number">02</span><strong>Semantics</strong><span>Shared business meaning</span></li>
+            <li><span class="layer-number">03</span><strong>Context</strong><span>What matters for this task</span></li>
+            <li><span class="layer-number">04</span><strong>Agent execution</strong><span>Reason, use tools, verify</span></li>
+          </ol>
+          <div class="map-feedback">↶ &nbsp; Evaluated outcomes and reviewed corrections improve the foundation</div>
+          <figcaption id="map-caption">A way to reason about responsibilities, not a prescribed stack. Governance and observability run across the whole system.</figcaption>
+        </figure>
+        <div class="essay-body">
+          <section class="essay-section" aria-labelledby="data-heading">
+            <div class="section-index">01 / DATA</div>
+            <div><h2 id="data-heading">Start with evidence people can trust.</h2>
+              <p>A good data layer makes records discoverable, timely, and dependable. That means clear ownership, understood grain, tested transformations, lineage, and access controls. A table’s existence says little about whether it is fit for a particular decision.</p>
+              <p>For an agent, a successful query can still return the wrong population or incomplete data. I want freshness, coverage, and known limitations to be visible alongside the values. These are part of the product’s usefulness.</p>
+            </div>
+          </section>
+          <section class="essay-section" aria-labelledby="semantics-heading">
+            <div class="section-index">02 / SEMANTICS</div>
+            <div><h2 id="semantics-heading">Turn business meaning into a shared contract.</h2>
+              <p>Data supports a semantic layer when teams explicitly model what it means: entities, relationships, metrics, dimensions, and the rules for calculating them. “Active customer” needs an agreed population, qualifying activity, and time window. Those definitions should be owned, versioned, and testable.</p>
+              <p>The payoff is reuse: dashboards, analysts, and agents can work from the same definition. I would standardize recurring, consequential questions first, while leaving room to explore new ones. Shared semantics should make interpretation more consistent without freezing analytical work.</p>
+              <p class="source-connection">One implementation: Netflix’s DataJunction connects metric definitions in a semantic graph and serves them through APIs. <button data-open="netflix-datajunction">Read the brief ↗</button></p>
+            </div>
+          </section>
+          <section class="essay-section" aria-labelledby="context-heading">
+            <div class="section-index">03 / CONTEXT</div>
+            <div><h2 id="context-heading">Bring the right meaning to the current task.</h2>
+              <p>A semantic layer is one input to a broader context layer. Here, I use “context layer” to mean the system that assembles relevant definitions, documentation, examples, lineage, current state, and user intent for a particular task. These responsibilities can span several tools.</p>
+              <p>A metric may be correctly defined and still be inappropriate for the question. The agent may need to know about a launch, an ingestion delay, or a business-unit exception. Useful context should carry its source and scope, stay current, and surface disagreement. More retrieved text is not automatically better guidance.</p>
+              <p class="source-connection">OpenAI’s internal data agent combines table knowledge, human annotations, institutional knowledge, memory, and live context. <a href="https://openai.com/index/inside-our-in-house-data-agent/" target="_blank" rel="noopener noreferrer">Read the engineering account ↗</a></p>
+            </div>
+          </section>
+          <aside class="worked-example" aria-labelledby="example-heading">
+            <div class="small-label">AN ILLUSTRATIVE EXAMPLE</div>
+            <h2 id="example-heading">“Why did retention fall this month?”</h2>
+            <dl>
+              <div><dt>Data</dt><dd>Are the customer events complete, and has the latest period finished loading?</dd></div>
+              <div><dt>Semantics</dt><dd>Which retention definition, cohort, and time window should apply?</dd></div>
+              <div><dt>Context</dt><dd>Did a launch, tracking change, or segment shift affect the comparison?</dd></div>
+              <div><dt>Agent</dt><dd>Clarify ambiguity, compare appropriate cohorts, inspect evidence, and distinguish a possible explanation from a demonstrated cause.</dd></div>
+            </dl>
+            <p>A useful response makes the definition, evidence, and uncertainty visible. Any follow-up action has its own permission and approval requirements.</p>
+          </aside>
+          <section class="essay-section" aria-labelledby="intelligence-heading">
+            <div class="section-index">04 / INTELLIGENCE</div>
+            <div><h2 id="intelligence-heading">Make intelligence an operating capability.</h2>
+              <p>These foundations give a model something dependable to reason over. Useful execution also requires well-defined tools, checks on intermediate results, and workflows that can recover from failure. Permissions must be enforced by the systems executing queries and actions; instructions in a prompt are insufficient.</p>
+              <p>For practitioners, I would prioritize the ability to trace a failure to its source: bad data, missing semantics, stale context, or incorrect agent behavior. That diagnosis should lead to a testable change. Corrections need review before they become shared knowledge, and production workflows need monitoring and safe recovery.</p>
+              <p>My product test is whether people can complete useful work with less verification and repair. I would measure task success, correctness, time to a verified result, and operating cost together. A fluent response is only the beginning.</p>
+            </div>
+          </section>
+          <div class="essay-position"><span class="small-label">WHERE I LAND</span><p>The foundation is a product in its own right: something practitioners can build, inspect, improve, and reuse—and something people can trust when an agent puts it to work.</p></div>
+          <p class="editorial-note">This is my synthesis of the ideas explored here. The references below offer implementations, tradeoffs, and counterpoints; they do not all share the same architecture or conclusions.</p>
+        </div>
+      </article>
       <section id="library" aria-labelledby="library-title">
-        <div class="library-heading"><h2 id="library-title">The collection <span id="result-count">11</span></h2><span class="library-caption">Takeaways at a glance. Five-part briefs one click away.</span></div>
+        <div class="reference-intro"><div class="eyebrow">THE REFERENCE LIBRARY</div><h2>Perspectives on the data<br>&amp; intelligence layer.</h2><p>A collection of articles and talks on how these foundations get built: data platforms, shared semantics, agent context, developer tools, and reliable workflows. Read them as additional perspectives on the argument above.</p><div class="reference-stats"><span><strong id="total-resources">11</strong> references</span><span><strong id="total-topics">09</strong> topics</span><span>Five-part briefs with every resource</span></div></div>
+        <div class="library-heading"><h3 id="library-title">All references <span id="result-count">11</span></h3><span class="library-caption">Filter the reading by company, topic, or format.</span></div>
         <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Search ideas, tools, or titles…" aria-label="Search resources"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Resource format</span><select id="format"><option value="All">All formats</option><option value="Article">Articles</option><option value="Video">Videos</option></select></label><label class="select-wrap"><span class="sr-only">Sort resources</span><select id="sort"><option value="curated">Curated order</option><option value="newest">Newest first</option><option value="title">Title A–Z</option></select></label></div>
         <div class="topics" id="topics" aria-label="Filter by topic"></div>
         <div class="filter-state" id="filter-state" hidden><span id="filter-summary"></span><button id="clear">Clear filters ×</button></div>
         <div class="cards" id="cards"></div><div class="empty" id="empty" hidden><span>⌕</span><h3>No resources in this view</h3><p>Try a different search or clear your filters.</p><button class="primary" id="empty-clear">Reset library</button></div>
         <p id="results-live" class="sr-only" role="status" aria-live="polite"></p>
       </section>
-      <footer><span>DATA &amp; AI FIELDNOTES <span class="footer-dot">·</span> Curated for curious practitioners.</span><span><a href="https://github.com/rajatverma199/data-ai-fieldnotes" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></span></footer>
+      <footer><span>DATA &amp; AI FIELDNOTES <span class="footer-dot">·</span> A perspective on the foundations of useful AI.</span><span><a href="https://github.com/rajatverma199/data-ai-fieldnotes" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></span></footer>
     </div>
   </main>
   <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><span>QUICK REVIEW · FIVE-PART BRIEF</span><button id="close-detail" aria-label="Close resource brief">✕</button></div><div id="detail-content"></div></dialog>
