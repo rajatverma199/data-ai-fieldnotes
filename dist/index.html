@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fieldnotes on data platforms, AI agents, analytics, and developer experience. Explore curated articles, compare ideas, and keep your own notes.">
+  <meta name="theme-color" content="#172b2b"><title>Data &amp; AI Fieldnotes · Ideas worth keeping</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172b2b'/%3E%3Cpath d='M18 16h28v32H18z' fill='%23e9c077'/%3E%3Cpath d='M24 16v32' stroke='%23172b2b' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#library">Skip to library</a>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="Data &amp; AI Fieldnotes home"><span class="brand-icon">▤</span><span>DATA &amp; AI<br>FIELDNOTES<span class="brand-sub">Ideas worth keeping.</span></span></a>
+    <div class="side-label">YOUR LIBRARY</div>
+    <nav aria-label="Library views" id="views">
+      <button class="nav-item active" data-view="all"><span>▦ &nbsp; All resources</span><span class="count" id="all-count">11</span></button>
+      <button class="nav-item" data-view="saved"><span>☆ &nbsp; Shortlist</span><span class="count" id="saved-count">0</span></button>
+      <button class="nav-item" data-view="reviewed"><span>✓ &nbsp; Reviewed</span><span class="count" id="reviewed-count">0</span></button>
+    </nav>
+    <div class="side-label company-label">COMPANIES</div>
+    <nav aria-label="Filter by company" id="companies">
+      <button class="company-btn active" data-company="All"><span class="company-dot all-dot"></span>All companies<span>11</span></button>
+      <button class="company-btn" data-company="Netflix"><span class="company-dot netflix-dot"></span>Netflix<span>6</span></button>
+      <button class="company-btn" data-company="OpenAI"><span class="company-dot openai-dot"></span>OpenAI<span>2</span></button>
+      <button class="company-btn" data-company="Meta"><span class="company-dot meta-dot"></span>Meta<span>1</span></button>
+      <button class="company-btn" data-company="Spotify"><span class="company-dot spotify-dot"></span>Spotify<span>1</span></button>
+      <button class="company-btn" data-company="Cross-company"><span class="company-dot cross-dot"></span>Cross-company<span>1</span></button>
+    </nav>
+    <div class="side-bottom"><div class="small-label">MAKE IT YOURS</div><p>Keep the ideas.<br>Bring your perspective.</p><div class="backup-actions"><button id="export">Export notes ↗</button><button id="import">Import</button><input id="import-file" type="file" accept="application/json,.json" hidden></div><span class="local-note">Notes and progress stay in this browser. Export to keep a backup.</span></div>
+    <div class="profile"><span class="avatar">RV</span><div>Curated by Rajat Verma<small>Data, AI &amp; developer experience</small></div></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>FIELDNOTES <span class="slash">/</span> Data &amp; AI</span><span class="private"><span></span> Curated reading library</span></header>
+    <div class="main-content">
+      <section class="intro"><div><div class="eyebrow">READ. CONNECT. BUILD YOUR PERSPECTIVE.</div><h1>Ideas worth keeping.<br>Patterns worth connecting.</h1><p>A curated collection for people building with data and AI.<br class="desktop-break"> Data platforms, analytics, and the people building them.</p></div><div class="stats"><div><strong id="total-resources">11</strong><span>resources</span></div><div><strong id="total-topics">09</strong><span>topics</span></div></div></section>
+      <section class="reading-path" aria-labelledby="path-title"><div class="path-icon">↗</div><div><div class="small-label">CONNECT THE DOTS</div><h2 id="path-title">From shared metrics to trusted answers</h2><p>Start with semantic layers. Explore Netflix’s approach. Then compare it with Kepler.</p><div class="path-links"><button data-open="bi-semantic">01 &nbsp; The argument <span>↗</span></button><span class="path-arrow">→</span><button data-open="netflix-analytics">02 &nbsp; The practice <span>↗</span></button><span class="path-arrow">→</span><button data-open="kepler">03 &nbsp; The next interface <span>↗</span></button></div></div><span class="path-caption">A suggested reading path</span></section>
+      <section id="library" aria-labelledby="library-title">
+        <div class="library-heading"><h2 id="library-title">The collection <span id="result-count">11</span></h2><span class="library-caption">Takeaways at a glance. Five-part briefs one click away.</span></div>
+        <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Search ideas, tools, or titles…" aria-label="Search resources"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Resource format</span><select id="format"><option value="All">All formats</option><option value="Article">Articles</option><option value="Video">Videos</option></select></label><label class="select-wrap"><span class="sr-only">Sort resources</span><select id="sort"><option value="curated">Curated order</option><option value="newest">Newest first</option><option value="title">Title A–Z</option></select></label></div>
+        <div class="topics" id="topics" aria-label="Filter by topic"></div>
+        <div class="filter-state" id="filter-state" hidden><span id="filter-summary"></span><button id="clear">Clear filters ×</button></div>
+        <div class="cards" id="cards"></div><div class="empty" id="empty" hidden><span>⌕</span><h3>No resources in this view</h3><p>Try a different search or clear your filters.</p><button class="primary" id="empty-clear">Reset library</button></div>
+        <p id="results-live" class="sr-only" role="status" aria-live="polite"></p>
+      </section>
+      <footer><span>DATA &amp; AI FIELDNOTES <span class="footer-dot">·</span> Curated for curious practitioners.</span><span><a href="https://github.com/rajatverma199/data-ai-fieldnotes" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></span></footer>
+    </div>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><span>QUICK REVIEW · FIVE-PART BRIEF</span><button id="close-detail" aria-label="Close resource brief">✕</button></div><div id="detail-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
