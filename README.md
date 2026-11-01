@@ -1,6 +1,6 @@
 # Data & AI Fieldnotes
 
-A curated reading library about data platforms, analytics, AI agents, and developer experience. Each resource includes a five-part brief, key takeaways, discussion prompts, and a link to its original source.
+An authored perspective on how reliable data, shared semantics, and relevant context support useful AI agents, followed by a curated reference library. Each resource includes a five-part brief, key takeaways, discussion prompts, and a link to its original source.
 
 [Visit the reading library](https://data-ai-fieldnotes.rajver.chatgpt.site).
 
@@ -25,7 +25,7 @@ Notes and reading progress are not sent to a server or included in the source co
 
 ## Source layout
 
-- `dist/index.html`: page structure and company filters.
+- `dist/index.html`: the landing-page essay, source connections, page structure, and company filters.
 - `dist/data.js`: curated resources and structured briefs.
 - `dist/app.js`: search, filters, review dialogs, and local notes.
 - `dist/style.css`: responsive presentation.
