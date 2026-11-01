@@ -2,7 +2,7 @@
 
 A curated reading library about data platforms, analytics, AI agents, and developer experience. Each resource includes a five-part brief, key takeaways, discussion prompts, and a link to its original source.
 
-[Visit the reading library](https://rajat-interview-dossier.rajver.chatgpt.site).
+[Visit the reading library](https://data-ai-fieldnotes.rajver.chatgpt.site).
 
 ## Run locally
 
@@ -43,4 +43,4 @@ Summaries are concise reading aids, not reproductions of the source articles. Di
 
 The interface loads fonts from Google Fonts and otherwise works without a backend. Follow original-source links for the complete material.
 
-The original site address and browser storage key are retained so existing readers keep their notes and progress.
+The site was renamed to Data & AI Fieldnotes. Notes saved under the previous site address require a JSON export/import to move between browser origins. The original storage key remains compatible with existing backups.
